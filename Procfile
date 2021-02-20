@@ -1,1 +1,1 @@
-web: gunicorn "app_test:app"
+worker: gunicorn "app_test:app"
