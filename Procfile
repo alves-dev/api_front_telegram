@@ -1,1 +1,1 @@
-web: gunicorn --workers=2 'main:start'
+web: gunicorn --workers=2 'main'
