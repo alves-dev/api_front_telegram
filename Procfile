@@ -1,1 +1,1 @@
-web: gunicorn --workers=2 'main'
+web: gunicorn --workers=2 "api_front.app:start()"
