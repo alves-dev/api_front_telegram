@@ -1,1 +1,1 @@
-worker: gunicorn "app_test:app"
+worker: python app_test.py

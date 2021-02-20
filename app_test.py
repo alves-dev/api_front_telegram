@@ -16,7 +16,7 @@ def deploy():
 
 
 def main():
-    port = int(os.environ.get("PORT", 5555))
+    port = int(os.environ.get("PORT", 1234))
     app.run(port=port)
 
 
