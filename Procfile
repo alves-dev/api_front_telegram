@@ -1,1 +1,1 @@
-Worker: python main.py
+web: gunicorn --workers=2 'main:start'
