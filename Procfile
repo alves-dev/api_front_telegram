@@ -1,1 +1,1 @@
-web: gunicorn "main:start()"
+web: python app_test.py
