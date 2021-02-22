@@ -39,7 +39,7 @@ logging.info('Threads started')
 
 def teste():
     while True:
-        time.sleep(5)
+        time.sleep(20)
         bot_telegram.send('teste essa bosta aqui')
 
 teste()
