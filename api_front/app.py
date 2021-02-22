@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 from config import settings
 from api_telegram import bot_telegram
 import logging
+import threading
+import main
 
 
 app = Flask('api_front_telegram')
@@ -48,6 +50,8 @@ def home_post():
 def start():
     app.run(port=settings.get('PORT_FLASK'))
 
+tr = threading.Thread(name='Thread-tasks', target=main.teste)
+tr.start()
 
 #main.config_log()
 #main.teste()
