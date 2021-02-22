@@ -4,6 +4,7 @@ import logging
 import logging.handlers
 from pathlib import Path
 from api_telegram import bot_telegram
+from api_front.app import start
 import time
 
 
@@ -26,12 +27,12 @@ def config_log():
     logging.getLogger().addHandler(handler)
 
 
-#config_log()
+config_log()
 
 logging.info(f'Start the api front telegram: {settings.VERSION}')
 
-#tr = threading.Thread(name='Thread-tasks', target=start)
-#tr.start()
+tr = threading.Thread(name='Thread-tasks', target=start)
+tr.start()
 
 logging.info('Threads started')
 
@@ -40,3 +41,5 @@ def teste():
     while True:
         time.sleep(5)
         bot_telegram.send('teste essa bosta aqui')
+
+teste()

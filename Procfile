@@ -1,1 +1,1 @@
-web: gunicorn "api_front.app:app"
+web: gunicorn "main:main" -b localhost:5555

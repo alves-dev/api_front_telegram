@@ -45,5 +45,5 @@ def start():
     app.run(port=settings.get('PORT_FLASK'))
 
 
-main.config_log()
-main.teste()
+#main.config_log()
+#main.teste()
