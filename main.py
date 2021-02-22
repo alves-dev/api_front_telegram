@@ -42,5 +42,6 @@ def teste():
     while True:
         time.sleep(30)
         bot_telegram.send(datetime.now())
+        print('time')
 
 teste()
