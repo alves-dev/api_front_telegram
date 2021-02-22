@@ -6,6 +6,7 @@ from pathlib import Path
 from api_telegram import bot_telegram
 from api_front.app import start
 import time
+from datetime import datetime
 
 
 print(f'Start the api front telegram: {settings.VERSION}')
@@ -40,6 +41,6 @@ logging.info('Threads started')
 def teste():
     while True:
         time.sleep(20)
-        bot_telegram.send('teste essa bosta aqui')
+        bot_telegram.send(datetime.now())
 
 teste()
