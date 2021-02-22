@@ -17,6 +17,10 @@ def message():
     return jsonify(body), 201
 
 
+@app.route('/', methods=['GET'])
+def raiz():
+    return 'rodando', 200
+
 """
 fila = ['igor', 'daiara', 'jade']
 

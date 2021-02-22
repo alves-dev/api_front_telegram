@@ -1,1 +1,1 @@
-web: gunicorn "main:main" -b localhost:5555
+web: gunicorn "main:main"
