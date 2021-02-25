@@ -1,1 +1,1 @@
-web: gunicorn "api_front.app:app" --timeout 2000
+web: gunicorn "app:app" --timeout 2000
