@@ -41,4 +41,18 @@ def teste():
     while True:
         time.sleep(30)
         #bot_telegram.send(datetime.now())
+        """
+        web: gunicorn "api_front.app:app"
+        worker: gunicorn main.py
+
+        gunicorn "api_front.app:api_front.app" -b localhost:5555
+        gunicorn "main:main" -b localhost:5555
+
+        gunicorn "main:main" --log-level debug --timeout 2000
+
+        """
+        logging.info('time')
+        logging.info('time1')
+        logging.info('time2')
+        logging.info('time3')
         print('time')
