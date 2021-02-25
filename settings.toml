@@ -1,24 +1,24 @@
 [default]
-VERSION = '0.0.1'
+VERSION = '1.0.0'
 LOG_FILENAME = 'log.log'
 LOG_DATE_FORMAT = '%d/%m/%Y %H:%M:%S'
 LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s: %(filename)s : Def %(funcName)s : Line %(lineno)d : %(message)s'
-LOG_MAX_BYTES = 536870912
-LOG_BACKUP_COUNT = 20
-TOKEN_TELEGRAM = '1021164880:AAGa84NATX5jhsW7BDbWCeqcA0EG7FMZj7Y'
-MY_CHAT_ID = '846928818'
+LOG_MAX_BYTES = 60200
+LOG_BACKUP_COUNT = 5
+t=0
 
 [development]
 RESOURCES = 'resources/'
 RESOURCES_DOWNLOADED = 'resources/downloaded/'
 RESOURCES_DOWNLOADED_TIME_HISTORY = 'resources/downloaded/time_history/'
 LOG_DIRECTORY = 'logs/'
-PORT_FLASK = 4545
-
+PORT_FLASK = 8000
+t=1
 
 [production]
 RESOURCES = 'resources/'
 RESOURCES_DOWNLOADED = 'resources/downloaded/'
 RESOURCES_DOWNLOADED_TIME_HISTORY = 'resources/downloaded/time_history/'
 LOG_DIRECTORY = 'logs/'
-PORT_FLASK = 6000
+PORT_FLASK = 8000
+t=2
