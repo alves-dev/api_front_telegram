@@ -15,5 +15,11 @@ def message():
     body = request.get_json()
     logging.info(f'body: {body}')
     print(body)
-    return_send = bot_telegram.send(body)
+    return_send = bot_telegram.send_message(body)
     return jsonify({'return_send': return_send, 'parameters': body}), 201
+
+
+@bp_send.route('/photo', methods=['POST'])
+@token_required
+def photo():
+    return 'Not implemented!', 201
