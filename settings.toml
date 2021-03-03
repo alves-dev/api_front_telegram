@@ -1,5 +1,5 @@
 [default]
-VERSION = '1.1.0'
+VERSION = '1.1.2'
 LOG_FILENAME = 'log.log'
 LOG_DATE_FORMAT = '%d/%m/%Y %H:%M:%S'
 LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s: %(filename)s : Def %(funcName)s : Line %(lineno)d : %(message)s'
