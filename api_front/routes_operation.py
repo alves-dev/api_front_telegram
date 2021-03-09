@@ -19,9 +19,6 @@ def is_valid():
 def status():
     logging.info('GET in operation/status')
     data = get_status()
-    # todo: apenas para test do new relic
-    from api_telegram import bot_telegram
-    bot_telegram.send_message(data)
     return jsonify(data), 200
 
 
