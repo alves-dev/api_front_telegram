@@ -8,6 +8,7 @@ import threading
 from utils import send_info
 import logging
 from api_telegram import bot_telegram
+import os
 
 
 config_log()
@@ -17,7 +18,8 @@ print(f'Start the api front telegram: {settings.VERSION}')
 
 app = Flask('api_front_telegram')
 
-bot_telegram.send_message(f'Start the api front telegram: {settings.VERSION}')
+bot_telegram.send_message(f'Start the api front telegram: {settings.VERSION}, environment: '
+                          f'{os.getenv("ENV_FOR_DYNACONF")}')
 
 STARTED = datetime.now()
 
@@ -30,10 +32,10 @@ def redirect_status():
 app.register_blueprint(bp_operation)
 app.register_blueprint(bp_send)
 
-'''
+
 if __name__ == '__main__':
     app.run(port=settings.get('PORT_FLASK'))
-'''
+
 
 tr = threading.Thread(name='Thread-tasks', target=send_info)
 tr.start()

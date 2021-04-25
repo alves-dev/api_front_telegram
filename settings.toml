@@ -1,5 +1,5 @@
 [default]
-VERSION = '1.1.3'
+VERSION = '2.0.0'
 LOG_FILENAME = 'log.log'
 LOG_DATE_FORMAT = '%d/%m/%Y %H:%M:%S'
 LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s: %(filename)s : Def %(funcName)s : Line %(lineno)d : %(message)s'
@@ -12,11 +12,11 @@ TIME_SEND_INFO = 18000
 RESOURCES = 'resources/'
 RESOURCES_DOWNLOADED = 'resources/downloaded/'
 LOG_DIRECTORY = 'logs/'
-PORT_FLASK = 8000
+PORT_FLASK = 8118
 
 
 [production]
 RESOURCES = 'resources/'
 RESOURCES_DOWNLOADED = 'resources/downloaded/'
 LOG_DIRECTORY = 'logs/'
-PORT_FLASK = 8000
+PORT_FLASK = 7111
