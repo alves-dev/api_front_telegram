@@ -1,11 +1,11 @@
 [default]
-VERSION = '2.0.0'
+VERSION = '2.0.1'
 LOG_FILENAME = 'log.log'
 LOG_DATE_FORMAT = '%d/%m/%Y %H:%M:%S'
 LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s: %(filename)s : Def %(funcName)s : Line %(lineno)d : %(message)s'
 LOG_MAX_BYTES = 50000
 LOG_BACKUP_COUNT = 5
-TIME_SEND_INFO = 18000
+TIME_SEND_INFO = 172800
 
 
 [development]
