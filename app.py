@@ -32,10 +32,8 @@ def redirect_status():
 app.register_blueprint(bp_operation)
 app.register_blueprint(bp_send)
 
+tr = threading.Thread(name='Thread-tasks', target=send_info)
+tr.start()
 
 if __name__ == '__main__':
     app.run(port=settings.get('PORT_FLASK'))
-
-
-tr = threading.Thread(name='Thread-tasks', target=send_info)
-tr.start()
