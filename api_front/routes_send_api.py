@@ -16,7 +16,11 @@ def message():
     logging.info(f'body: {body}')
     print(body)
     return_send = bot_telegram.send_message(body)
-    return jsonify({'return_send': return_send, 'parameters': body}), 201
+    if not return_send:
+        return_send = bot_telegram.send_message(body)
+        if not return_send:
+            return jsonify({'return_send': return_send, 'attempts': '2', 'parameters': body}), 500
+    return jsonify({'return_send': return_send, 'parameters': body}), 201 if return_send else 500
 
 
 @bp_send.route('/photo', methods=['POST'])
